@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Grofoo - Customer Order Summary</title>
+    <link rel="icon" href="../assets/images/favicon.png" type="image/png" sizes="16x16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Farmcon">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700%7CRoboto:300,400,500%7CMuli:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.css">
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="../assets/css/ionicons.min.css">
+    <link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+
+<body>
+
+    <div class="wrapper dashboard">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <li class="my_cart_mobile dropdown  notify navbar-toggle">
+                        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2">
+                            <span class="notify-row">
+                                <span class="bell ">
+                                    <i class="ion-ios-cart-outline"></i> 
+                                    <span class="label label-info badge">3</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown my_cart_mobile ic_mobile_Search notify navbar-toggle">
+                        <div class="header-mobile-search-box">
+                            <div class="h-m-s-box">
+                                <i class="ion-ios-search-strong"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../assets/images/header_logo.png" class="logo_c"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav header_search">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group header_search_box">
+                                <input type="text" class="form-control" placeholder="Enter indian food or grocery" name="q">
+                                <input type="text" class="form-control" placeholder="Enter address, city, zip code or state" name="q">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default search_btn_header" type="submit">
+                                        <i class="ion-ios-search-strong"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </ul>
+                    <ul class="nav navbar-nav  navbar-right">
+                        <li class="dropdown notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="notify-row">
+                                    <span class="bell ">
+                                        <i class="ion-bag"></i>
+                                        <span class="label label-info badge">3</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="notify-arrow notify-arrow-green"></div>
+                                <li>
+                                    <p class="header">You have 0 Items In your cart</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        No item available.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center">View All</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <a class="btn btn-nav-line page-scroll " href="#">
+                            <span>
+                                Sign In</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main" class="main search_result">
+
+            <div class="inner-page-hero bg-image" style="background: url('assets/images/account_bg.png') center center / cover no-repeat;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 account-desc">
+                            <div class="pull-left right-text white-txt">
+                                <h6>
+                                    <a href="#">Customer Order Summary</a>
+                                </h6>
+
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-right account-desc">
+                            <p class="text-white text-left">Tip!: By signing in you can view previous orders, save cart even if store are closed or for future
+                                purchases.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end:Container -->
+            </div>
+
+
+            <div class="account_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 m-b-30">
+                            <div class="c_header">
+                                Customer Details
+                            </div>
+                            <div class="c_order_box text-left">
+                                <span class="s_details">Name:
+                                    <span> Customer name</span>
+                                </span>
+                                <span class="s_details">Email:
+                                    <span> Customer@gmail.com</span>
+                                </span>
+                                <span class="s_details">Phone:
+                                    <span> 989 9898 989</span>
+                                </span>
+                                <span class="s_details">Address:
+                                    <span> Frederick, MD 20704</span>
+                                </span>
+                                <span class="s_details">&nbsp</span>
+                                </span>
+                            </div>
+                            <div class="c_footer">
+                                <a class="btn btn-action btn-gplus wow fadeInDown nomargin" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                    <span>
+                                        <i class="ion-person"></i>
+                                    </span>
+                                    <span href="#">Update Information</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 m-b-30">
+                            <div class="c_header">
+                                Payment Information
+                            </div>
+                            <div class="c_order_box text-left">
+                                <span class="s_details">Coupon Savings:
+                                    <span> $ 0.00</span>
+                                </span>
+                                <span class="s_details">Payment Type:
+                                    <span> Pay at store or Delivery </span>
+                                </span>
+                                <span class="s_details">Order Timing:
+                                    <span> Now</span>
+                                </span>
+                                <span class="s_details">Note:
+                                    <span> Your order will be ready in 15-20 minutes after it is placed.</span>
+                                </span>
+                                <span class="s_details">Order store info:
+                                    <span>You are placing orders to multiple store locations.
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="c_footer" style="height:48px;">
+                                <p>Balance Due:
+                                    <span class="tag_price">$2338.95</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="c_header">
+                                My Order
+                            </div>
+                            <div class="c_body text-left">
+                                <p>Please select checkbox at the order level for takeOut. </p>
+                                <div class="panel panel-primary filterable ">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-left">
+                                                <div class="m-t-5">
+                                                    <label>5732 Backeystown Pike, Frederick, MD 20704 , Phone No: 7836 7737 36</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 text-right">
+                                                <div class="">
+                                                    <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                                                    <label for="styled-checkbox-1">TakeOut</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="list_view" class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Image" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Product Name" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Special instructions" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Quantity" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Price" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Action" disabled>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/blog_small.png">
+                                                    </td>
+                                                    <td>Saffron Halva</td>
+                                                    <td> Please keep the suger little bit low.</td>
+                                                    <td>
+                                                        <input type="number" class="form-control text-center qty_box" value="1">
+                                                    </td>
+                                                    <td>$14</td>
+                                                    <td>
+                                                        <button data-wow-delay="0.3s" data-target="#myModal" data-toggle="modal" class="btn text-white btn-action btn-gplus no_margin wow fadeInDown btn-xs">
+                                                            <span class="ion-ios-trash"></span> Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/blog_small.png">
+                                                    </td>
+                                                    <td>Saffron Halva</td>
+                                                    <td> Please keep the suger little bit low.</td>
+                                                    <td>
+                                                        <input type="number" class="form-control text-center qty_box" value="1">
+                                                    </td>
+                                                    <td>$14</td>
+                                                    <td>
+                                                        <button data-wow-delay="0.3s" data-target="#myModal" data-toggle="modal" class="btn text-white btn-action btn-gplus no_margin wow fadeInDown btn-xs">
+                                                            <span class="ion-ios-trash"></span> Delete</button>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Apple for coupon -->
+                                                <tr>
+                                                    <td colspan="4" class="text-right">
+
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <input type="text" class="form-control text-center " placeholder="Coupon Code">
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-action btn-gplus wow fadeInDown nomargin" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                                            <span>
+                                                                <i class="ion-checkmark-circled"></i>
+                                                            </span>
+                                                            <span href="#">Apply Now</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <!-- end of Apple for coupon -->
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="panel panel-primary filterable ">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-left">
+                                                <div class="m-t-5">
+                                                    <label>Food World: Frederick, MD 20704 , Phone No: 7836 7737 36</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 text-right">
+                                                <div class="">
+                                                    <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value1">
+                                                    <label for="styled-checkbox-2">TakeOut</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="list_view" class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr class="filters">
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Image" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Product Name" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Special instructions" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Quantity" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Price" disabled>
+                                                    </th>
+                                                    <th>
+                                                        <input type="text" class="form-control" placeholder="Action" disabled>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/blog_small.png">
+                                                    </td>
+                                                    <td>Saffron Halva</td>
+                                                    <td> Please keep the suger little bit low.</td>
+                                                    <td>
+                                                        <input type="number" class="form-control text-center qty_box" value="1">
+                                                    </td>
+                                                    <td>$14</td>
+                                                    <td>
+                                                        <button data-wow-delay="0.3s" data-target="#myModal" data-toggle="modal" class="btn text-white btn-action btn-gplus no_margin wow fadeInDown btn-xs">
+                                                            <span class="ion-ios-trash"></span> Delete</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="../assets/images/blog_small.png">
+                                                    </td>
+                                                    <td>Saffron Halva</td>
+                                                    <td> Please keep the suger little bit low.</td>
+                                                    <td>
+                                                        <input type="number" class="form-control text-center qty_box" value="1">
+                                                    </td>
+                                                    <td>$14</td>
+                                                    <td>
+                                                        <button data-wow-delay="0.3s" data-target="#myModal" data-toggle="modal" class="btn text-white btn-action btn-gplus no_margin wow fadeInDown btn-xs">
+                                                            <span class="ion-ios-trash"></span> Delete</button>
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Apple for coupon -->
+                                                <tr>
+                                                    <td colspan="4" class="text-right">
+
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <input type="text" class="form-control text-center " placeholder="Coupon Code">
+                                                    </td>
+                                                    <td>
+                                                        <a class="btn btn-action btn-gplus wow fadeInDown nomargin" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                                            <span>
+                                                                <i class="ion-checkmark-circled"></i>
+                                                            </span>
+                                                            <span href="#">Apply Now</span>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <!-- end of Apple for coupon -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div id="list_view" class="table-responsive">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-right"> Subtotal:  $ 1233.23</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"> Tax: $124</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"> Total: $2260</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right"> Coupon Savings: $ 0.0</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="c_footer">
+                                <div class="row">
+                                    <div class="col-sm-6 text-left">
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <a class="btn btn-action btn-gplus wow fadeInDown nomargin" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                            <span>
+                                                <i class="ion-ios-cart"></i>
+                                            </span>
+                                            <span href="#">Continue Shopping</span>
+                                        </a>
+                                        <a class="btn btn-action btn-gplus wow fadeInDown nomargin" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                            <span>
+                                                <i class="ion-checkmark-circled"></i>
+                                            </span>
+                                            <span href="#">Place Your Order</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <span class="sub_text">Subscribe us for getting the calander deals & discount</span>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <div class="in_center">
+                                <input class="btn btn-lg input_frm" name="email" id="email" type="email" placeholder="Enter Your Email" required>
+                                <button class="btn btn-action Subscribe_btn nomargin" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer_icons_box">
+                            <div class="col-sm-3">
+                                <i class="footer_icons ion-social-facebook"></i>
+                                <div class="footer_content">
+                                    <span class="footer_icon_title">
+                                        indexfingfb
+                                    </span>
+                                    <span class="footer_sub_text">
+                                        Share with your friends
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="footer_icons ion-email"></i>
+                                <div class="footer_content">
+                                    <span class="footer_icon_title">
+                                        indexfing@cook.in
+                                    </span>
+                                    <span class="footer_sub_text">
+                                        For any issues
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="footer_icons ion-social-instagram-outline"></i>
+                                <div class="footer_content">
+                                    <span class="footer_icon_title">
+                                        indexfing
+                                    </span>
+                                    <span class="footer_sub_text">
+                                        Share with your friends
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <i class="footer_icons ion-social-youtube"></i>
+                                <div class="footer_content">
+                                    <span class="footer_icon_title">
+                                        Watch More
+                                    </span>
+                                    <span class="footer_sub_text">
+                                        Watch share and enjoy!
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row footer_content_box">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="ft-right">
+                                <div class="footer-img">
+                                    <img src="../assets/images/header_logo.png" width="156" alt="Logo">
+                                </div>
+                                <p>Indexfing will let you concentrate on your new business models, products, stores, and customers
+                                    as it frees up your time from worrying about technology, with our cutting-edge technology
+                                    protection on your stores by 24/7 and 365 days.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-xs-6 col-sm-offset-2">
+                            <div class="ft-right">
+                                <span class="ftr-title">Know Us</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Farmer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buyer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produce</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-xs-6">
+                            <div class="ft-right">
+                                <span class="ftr-title">Know Us</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Farmer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buyer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produce</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-xs-6">
+                            <div class="ft-right">
+                                <span class="ftr-title">Know Us</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Farmer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buyer</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Produce</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Policy</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="row">
+                        <div class="col-sm-3 col-md-6 col-xs-6">
+                            <span class="footer_icon_title">indexfing</span>
+                            <span class="footer_sub_text">grocery to eatery</span>
+                        </div>
+                        <div class="col-sm-3 col-md-6 col-xs-6 text-right">
+                            <span class="footer_icon_title">&nbsp;</span>
+                            <span class="footer_sub_text">&copy; 2018 indexfing</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Account Deactivation</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="popup_form wow fadeInDown " data-wow-delay="0.3s">
+                        <br>
+                        <br>
+                        <div class="stats-title text-center">
+                            <h4>Are you sure want to deactivate your account ? </h4>
+                        </div>
+                        <br>
+                        <br>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-action btn-gplus no_margin wow fadeInDown" data-wow-delay="0.3s">
+                        <span>
+                            <i class="ion-checkmark-circled"></i>
+                        </span>
+                        <span>Yes</span>
+                    </a>
+                    <a href="#" class="btn btn-cancel btn-gplus no_margin wow fadeInDown" data-dismiss="modal" data-wow-delay="0.3s">
+                        <span>
+                            <i class="ion-ios-close"></i>
+                        </span>
+                        <span>No</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Change Account Info</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="popup_form wow fadeInDown " data-wow-delay="0.3s">
+                        <form id="signup" class="formee" action="submit" method="post">
+                            <input name="de" type="text" placeholder="First Name" />
+                            <input name="de" type="text" placeholder="Last Name" />
+                            <input name="de" type="text" placeholder="Email Address" />
+                            <input name="de" type="text" placeholder="Phone Number" />
+                        </form>
+                        <div class="m-b-5">
+                            <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1">
+                            <label for="styled-checkbox-1">Show Personalized Restaurants Notes</label>
+                        </div>
+                        <div class="m-b-5">
+                            <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2">
+                            <label for="styled-checkbox-2">Receive SMS Notifications</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-action btn-gplus no_margin wow fadeInDown" data-wow-delay="0.3s">
+                        <span>
+                            <i class="ion-checkmark-circled"></i>
+                        </span>
+                        <span>Yes</span>
+                    </a>
+                    <a href="#" class="btn btn-cancel btn-gplus no_margin wow fadeInDown" data-dismiss="modal" data-wow-delay="0.3s">
+                        <span>
+                            <i class="ion-ios-close"></i>
+                        </span>
+                        <span>No</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../assets/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/plugins.js"></script>
+    <script type="text/javascript" src="../assets/js/validator.js"></script>
+    <script type="text/javascript" src="../assets/js/custom.js"></script>
+    <script type="text/javascript" src="../assets/js/chart.js"></script>
+    <script type="text/javascript" src="../assets/js/chart.min.js"></script>
+</body>
+
+</html>
