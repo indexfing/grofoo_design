@@ -23,79 +23,160 @@
 </head>
 
 <body>
-
-    <div class="wrapper Grofoo-home Stores-home">
-
-
-        <div id="main" class="main">
-            <div class="hero">
-                <div class="container text-center hero-text font-white stores_box">
-                    <div class="row">
-                        <div class="col-sm-12 col-md-6 p-0 hide-small">
-                            <div class="left_side_img">
-                                <img src="../assets/images/zip_code_bg.png">
+    <div class="wrapper dashboard Grofoo-home">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header page-scroll get-loc-menu">
+                     <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <li class="my_cart_mobile dropdown  notify navbar-toggle">
+                        <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2">
+                            <span class="notify-row">
+                                <span class="bell ">
+                                    <i class="ion-ios-cart-outline"></i> 
+                                    <span class="label label-info badge">3</span>
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="dropdown my_cart_mobile ic_mobile_Search notify navbar-toggle">
+                        <div class="header-mobile-search-box">
+                            <div class="h-m-s-box">
+                                <i class="ion-ios-search-strong"></i>
+                                <input type="text" placeholder="Search">
                             </div>
                         </div>
-                        <div class="col-sm-12 col-md-6 p-0">
-                            <div class="zip-search-box">
-                                <div class="deliver-section text-center">
-                                    <img class="location_logo" src="../assets/images/header_logo.png">
-                                </div>
-                                <div class="location-selection">
-                                    <p class="location_popup_title">Enter your Delivery Address or Zip code</p>
-                                    <div class="location-search-box">
-                                        <i class="location-seach-icon ion-ios-search"></i>
-                                        <input type="text" class="search-input"
-                                            placeholder="Address or zip code">
-                                        <button class="auto-detect-btn"><i class="ion-android-locate"></i>Detect
-                                        </button>
-                                        <button class="btn btn-get-started" onclick='location.href="store_home.html";'>Get Started</button>
+                    </li>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="../assets/images/header_logo.png" class="logo_c"> </a>
+                </div>
+                <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav ">
+                        <!-- <li class="dropdown  notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="notify-row">
+                                    <span class="bell ">
+                                        <i class="ion-ios-location-outline"></i>Location<i
+                                            class="ion-chevron-down adown"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="notify-arrow notify-arrow-green"></div>
+                                <div class="search-box">
+                                    <h3 class="header">Where do you want the delivery?</h3>
+                                    <div class="deliver-section">
+                                        Deliver in : <span class="clr_green">Gurugram</span>
+                                    </div>
+                                    <div class="location-selection">
+                                        <p>——— Or Select your city ———</p>
+                                        <h1>Top Searched Cities</h1>
+                                        <span class="city_tag">
+                                            New York
+                                        </span>
+                                        <span class="city_tag">
+                                            Brooklyn 
+                                        </span>
+                                        <span class="city_tag">
+                                            Chicago 
+                                        </span>
+                                        <div class="location-search-box">
+                                            <i class="location-seach-icon ion-ios-search"></i>
+                                            <input type="text" class="search-input"
+                                                placeholder="Address, city, zip code or state">
+                                            <button class="auto-detect-btn"><i
+                                                    class="ion-android-locate"></i>Detect</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="Store_image_box">
-                                <h2 class="Stores_title">Our Stores</h2>
-                                <div class="stores_image_list">
-                                    <img onclick='location.href="search_list_new_grocery_owne.html";' src="../assets/images/store_img_1.png">
-                                    <img onclick='location.href="search_list_new_grocery_owne.html";' src="../assets/images/store_img_2.png">
-                                    <img onclick='location.href="search_list_new_foods_owne.html";' src="../assets/images/store_img_3.png">
-                                    <img onclick='location.href="search_list_new_foods_owne.html";' src="../assets/images/store_img_4.png">
-                                    <img onclick='location.href="search_list_new_grocery_owne.html";' src="../assets/images/store_img_5.png">
-                                    <img onclick='location.href="search_list_new_veggies_owne.html";' src="../assets/images/farms_img_2.png">
-                                </div>
-                            </div>
+                            </ul>
+                        </li>
+                        <li class="dropdown  notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2">
+                                <span class="notify-row">
+                                    <span class="bell ">
+                                        <i class="ion-ios-cart-outline"></i> My Cart
+                                        <span class="label label-info badge">3</span>
+                                    </span>
+                                </span>
+                            </a>
+                        </li>
+
+                       <li>
+                            <a class="btn btn-nav-line page-scroll " href="login.html"> <i
+                                class="ion-ios-contact-outline"></i> Sign
+                            In </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="main" class="main search_result">
+
+            <div class="login_bg">
+                <div class="wrapper Grofoo-home Stores-home get-loc-head">
+                        
+                           <div class="container text-center hero-text font-white stores_box get-loc-head-inner">
+                              <div class="row">
+                                 <div class="col-sm-12 col-md-12 p-0">
+                                    <div class="zip-search-box">
+                                       <div class="deliver-section text-center">
+                                          <img class="location_logo" src="../assets/images/header_logo.png">
+                                       </div>
+                                       <div class="location-selection">
+                                          <p class="location_popup_title">Enter your Delivery Address or Zip code</p>
+                                          <div class="location-search-box">
+                                             <i class="location-seach-icon ion-ios-search"></i>
+                                             <input type="text" class="search-input"
+                                                placeholder="Address or zip code">
+                                             <button class="auto-detect-btn"><i class="ion-android-locate"></i>Detect
+                                             </button>
+                                             <button class="btn btn-get-started" onclick='location.href="store_home.html";'>Get Started</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        
+                    </div>
+            </div>
+
+       
+
+
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-9 col-md-9 col-xs-12">
+                            <ul class="footer-link">
+                                <li><a href="aboutus.html">About Us</a></li>
+                                <li><a href="faq.html">Help Center</a></li>
+                                <li><a href="Business_contact_us.html">Contact Us</a></li>
+                                <li><a href="policy.html">Privacy Policy</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="Business_Home.html">Retailer login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-xs-12 text-right">
+                            <ul class="social-link">
+                                <li><i class="ion-social-facebook social-icon"></i></li>
+                                <li><i class="ion-social-linkedin social-icon"></i></li>
+                                <li><i class="ion-social-twitter social-icon"></i></li>
+                                <li><i class="ion-social-skype social-icon"></i></li>
+                            </ul>
                         </div>
                     </div>
+    
                 </div>
             </div>
-
         </div>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9 col-md-9 col-xs-12">
-                        <ul class="footer-link">
-                            <li><a href="aboutus.html">About Us</a></li>
-                            <li><a href="faq.html">Help Center</a></li>
-                            <li><a href="Business_contact_us.html">Contact Us</a></li>
-                            <li><a href="policy.html">Privacy Policy</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="Business_Home.html">Retailer login</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 col-md-3 col-xs-12 text-right">
-                        <ul class="social-link">
-                            <li><i class="ion-social-facebook social-icon"></i></li>
-                            <li><i class="ion-social-linkedin social-icon"></i></li>
-                            <li><i class="ion-social-twitter social-icon"></i></li>
-                            <li><i class="ion-social-skype social-icon"></i></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
     </div>
 
 
@@ -105,8 +186,7 @@
     <script type="text/javascript" src="../assets/js/plugins.js"></script>
     <script type="text/javascript" src="../assets/js/validator.js"></script>
     <script type="text/javascript" src="../assets/js/custom.js"></script>
-    <script type="text/javascript" src="../assets/js/bloodhound.js"></script>
-    <script type="text/javascript" src="../assets/js/chart.js"></script>
+
 </body>
 
 </html>
