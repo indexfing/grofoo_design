@@ -11489,6 +11489,12 @@ font-weight: 700;
   color: white;
       margin-bottom: 12px;
 }
+a.fb-l.btn:hover,
+a.fb-l.btn:focus,
+a.google-l.btn:hover,
+a.google-l.btn:focus {
+    color: white;
+}
 .f_createacc a{
 color: #f7901d;
     line-height: 12px;
