@@ -267,7 +267,7 @@
 		}else if(zipcode.length <5 || zipcode.length >5)
 		{
 			console.log('else if');
-			$("#err_msg").text('Please give enter the 5 digit');
+			$("#err_msg").text('Please enter 5-digit zipcode');
 		}else
 		{
 			showHide(2,'doGetLocation');
@@ -311,11 +311,11 @@
 		console.log(regPassword,regExitPassword);
 		if(regPassword =='' || regExitPassword=='' || regEmail =='')
 		{
-			$("#err_reg_msg").text('Please Enter All field');
+			$("#err_reg_msg").text('Please Enter all the fields');
 			return false;
 		}else if(regPassword!= regExitPassword)
 		{
-			$("#err_reg_msg").text('Your Password Mismatch');
+			$("#err_reg_msg").text('Passwords does not match.');
 			return false;
 		}else
 		{
