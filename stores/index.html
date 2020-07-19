@@ -123,9 +123,10 @@
                                     <div class="location-selection">
                                         <p class="location_popup_title">Enter your Delivery Address or Zip code</p>
                                         <div class="location-search-box"> <i class="location-seach-icon ion-ios-search"></i>
-                                            <input type="text" class="search-input" placeholder="Address or zip code">
+                                            <input type="tel" class="search-input" placeholder="Address or zip code" minlength="5" maxlength="5" required id="zipcode" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
                                             <button class="auto-detect-btn"><i class="ion-android-locate"></i>Detect</button>
-                                            <button class="btn btn-get-started" onclick='location.href="store_home.html";'>Get Started</button>
+                                            <p id="err_msg" class="error_show "></p>
+                                            <button class="btn btn-get-started" onclick='return validation()'>Get Started</button>
                                         </div>
                                     </div>
                                 </div>
@@ -139,22 +140,24 @@
                                     <p class="l_f_title">First time?</p>
                                     <p class="wow fadeInDown l_f_subtext nomargin" data-wow-delay="0.2s">It only takes a minute to login with Grofoo.</p>
                                     <br>
-                                    <div class="f_createacc text-left"> <span class="new_user_link">New User ? </span>  <a href="register.html">Create Account </a>
+                                    <div class="f_createacc text-left"> <span class="new_user_link">New User ? </span>  <a onclick="pageChange(1);">Create Account </a>
                                     </div>
                                     <br>
                                     <div class="subform wow fadeInDown " data-wow-delay="0.3s">
-                                        <form id="signup" class="formee" action="submit" method="post">
-                                            <input name="email" id="email" type="text" placeholder="Email" />
+                                        <form id="signup" class="formee" method="post">
+                                            <input name="email" id="email" type="email" placeholder="Email" required="true" />
                                             <div class="form_error" style="display:none;">This field is required</div>
-                                            <input name="password" id="password" type="password" placeholder="Password" />
+                                            <input name="password" id="password" type="password" placeholder="Password" required="true" />
                                             <div class="f_password text-left"> <a href="forget_password.html">Forgot password? </a>
                                             </div>
-                                        </form>
-                                        <a href="store_home.html" class="btn btn-action btn-gplus wow fadeInDown" data-wow-delay="0.3s"> <span>
+                                             <p id="err_msg_login" class="err_msg_login ">Error or pass</p>
+                                            <button type="submit" class="btn btn-action btn-gplus wow fadeInDown" data-wow-delay="0.3s"> <span>
                                                         <i class="ion-person-stalker"></i>
                                                     </span>
                                             <span>Login</span>
-                                        </a> <span class="l_f_or">or</span>
+                                        </button>
+                                        </form>
+                                         <span class="l_f_or">or</span>
                                         <div class="row omb_socialButtons">
                                             <div class="col-xs-12 col-sm-6 col-md-6">
                                                 <!-- <a href="store_home.html" class="btn btn-lg btn-block f-facebook">
@@ -184,18 +187,23 @@
                                     <p class="l_f_title">Already Registered on indexfing?</p>
                                     <p class="wow fadeInDown l_f_subtext nomargin" data-wow-delay="0.2s">It only takes a minute to register with indexfing.</p>
                                     <div class="subform wow fadeInDown " data-wow-delay="0.3s">
-                                        <form id="signup" class="formee" action="submit" method="post">
-                                            <input name="email" id="email" type="text" placeholder="Email" />
+                                        <form id="signup" class="formee" method="post">
+                                            <input name="email" id="regEmail" type="email" placeholder="Email" />
                                             <div class="form_error" style="display:none;">This field is required</div>
-                                            <input name="password" id="password" type="password" placeholder="Password" />
-                                            <input name="password" id="password" type="password" placeholder="Password Again" />
-                                        </form>
-                                        <a href="store_home.html" class="btn btn-action btn-gplus wow fadeInDown" data-wow-delay="0.3s"> <span>
+                                            <input name="password" id="regPassword" type="password" placeholder="Password" minlength="6"  onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+                                            <input name="password" id="regExitPassword" type="password" placeholder="Password Again" minlength="6" onkeypress="return event.charCode >= 48 && event.charCode <= 57" />
+
+                                            <p id="err_reg_msg" class="error_show"></p>
+
+                                            <button type="submit" class="btn btn-action btn-gplus wow fadeInDown" data-wow-delay="0.3s" onclick="return checkPassword()"> <span>
                                             <i class="ion-person-stalker"></i>
                                         </span>
                                             <span>Register</span>
-                                        </a> <span class="l_f_or">or</span>
-                                        <div class="f_createacc text-center"> <span class="new_user_link">Have an account? </span>  <a href="login.html">Back to login</a>
+                                        </button>
+                                        
+                                        </form>
+                                         <span class="l_f_or">or</span>
+                                        <div class="f_createacc text-center"> <span class="new_user_link">Have an account? </span>  <a onclick="pageChange(2)">Back to login</a>
                                         </div>
                                     </div>
                                 </div>
@@ -247,5 +255,72 @@
     <script type="text/javascript" src="../assets/js/validator.js"></script>
     <script type="text/javascript" src="../assets/js/custom.js"></script>
 </body>
+<script type="text/javascript">
+	function validation()
+	{
+		$("#err_msg").text('');
+		var zipcode = $("#zipcode").val();
+		console.log(zipcode.length);
+		if(zipcode=='')
+		{
+			$("#err_msg").text('Please Enter ZipCode');
+		}else if(zipcode.length <5 || zipcode.length >5)
+		{
+			console.log('else if');
+			$("#err_msg").text('Please give enter the 5 digit');
+		}else
+		{
+			showHide(2,'doGetLocation');
+			showHide(1,'doLogin');
+		}
+	}
 
+	function pageChange(flag)
+	{
+		showHide(2,'doLogin');
+		showHide(2,'doRegister');
+
+		if(flag==1) // register
+		{
+			showHide(1,'doRegister');	
+		}else // login
+		{
+			showHide(1,'doLogin');
+		}
+		
+	}
+
+	function showHide(flag=1,id)
+	{
+		if(flag==1) //show
+		{
+			$("#"+id).show();
+		}else //hide
+		{
+			$("#"+id).hide();
+		}
+	}
+
+	function checkPassword()
+	{
+		$("#err_reg_msg").text('');
+		var regPassword 	= $("#regPassword").val();
+		var regEmail 		= $("#regEmail").val();
+		var regExitPassword = $("#regExitPassword").val();
+
+		console.log(regPassword,regExitPassword);
+		if(regPassword =='' || regExitPassword=='' || regEmail =='')
+		{
+			$("#err_reg_msg").text('Please Enter All field');
+			return false;
+		}else if(regPassword!= regExitPassword)
+		{
+			$("#err_reg_msg").text('Your Password Mismatch');
+			return false;
+		}else
+		{
+			return true;
+		}
+	}
+</script>
 </html>

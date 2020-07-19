@@ -10817,7 +10817,7 @@ button:focus {
   color: #fff;
   border-radius: 73px;
   width: 100%;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 10px 12px;
   border-color: #f7901d;
   font-size: 16px;
@@ -11506,4 +11506,18 @@ color: #f7901d;
 .login-head-align{
   max-width: 480px;
     margin: auto !important;
+}
+p.error_show {
+    text-align: left;
+    position: absolute;
+    font-size: 12px !important;
+    color: red !important;
+}
+p.err_msg_login {
+    text-align: right;
+    right: 0;
+    position: absolute;
+    font-size: 12px !important;
+    color: red !important;
+    margin-top: 9px;
 }
