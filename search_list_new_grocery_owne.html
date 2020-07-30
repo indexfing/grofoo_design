@@ -4,14 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Grofoo - Grocery Owner Listing</title>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="16x16">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Grofoo">
+    <title>indexfing - Grocery Product result v.2</title>
+    <!-- fav icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- end of fav icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Indexfing">
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700%7CRoboto:300,400,500%7CMuli:300,400"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700%7CRoboto:300,400,500%7CMuli:300,400" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/css/owl.theme.css">
@@ -23,9 +41,132 @@
 
 <body>
 
-    <div class="wrapper Grofoo-home  Stores-home-new">
-        <nav class="navbar navbar-default navbar-fixed-top">
+<div class="modal fade" id="searchByBrand" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Search By Brand</h4>
+        </div>
+        <div class="modal-body">
+         <div class="brand_image-model">
+             <a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_8.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_3.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_4.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_5.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_6.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_7.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_4.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_5.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_6.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_7.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_8.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_3.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_4.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_5.png"></a>
+<a href="" data-dismiss="modal"><img class="brand_image" src="assets/images/b_6.png"></a>
+
+                            
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="search-bybrand" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+    <div class="wrapper Grofoo-home dashboard  Stores-home-new">
+        <!-- <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/images/Logo.png" class="logo_c"> </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav  navbar-left hidden-sm hidden-md hidden-xs">
+                        <li class="dropdown notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="notify-row">
+                                    <span class="bell ">
+                                        <i class="ion-location"></i>
+                                        <span class="label label-info l_name_b">USA</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="l_notify-arrow notify-arrow-green"></div>
+                                <li>
+                                    <p class="location_header">Enter Your Location / Store Name</p>
+                                </li>
+                                <li>
+                                    <div class="location_search">
+                                        <input class="typeahead form-control " type="text" placeholder="Enter here...">
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav header_search">
+                        <form class="navbar-form" role="search">
+                            <div class="input-group header_search_box">
+                                <input class="typeahead tt-query form-control full-search" type="text" placeholder="Search...">
+                            </div>
+                        </form>
+
+                    </ul>
+                    <ul class="nav navbar-nav  navbar-right">
+                        <li><a href="#">Our Promise</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li class="dropdown notify">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="notify-row">
+                                    <span class="bell ">
+                                        <i class="ion-bag"></i>
+                                        <span class="label label-info badge">3</span>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="notify-arrow notify-arrow-green"></div>
+                                <li>
+                                    <p class="header">You have 0 Items In your cart</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        No item available.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center">View All</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <a class="btn btn-nav-line page-scroll " href="#">
+                            <span>
+                                Sign In</span>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid cus-align-menu-store">
                 <div class="navbar-header page-scroll">
                      <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,7 +175,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <li class="my_cart_mobile dropdown  notify navbar-toggle">
+                    <!-- <li class="my_cart_mobile dropdown  notify navbar-toggle">
                         <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2">
                             <span class="notify-row">
                                 <span class="bell ">
@@ -43,72 +184,32 @@
                                 </span>
                             </span>
                         </a>
-                    </li>
-                    <li class="dropdown my_cart_mobile ic_mobile_Search notify navbar-toggle">
+                    </li> -->
+                    <!-- <li class="dropdown my_cart_mobile ic_mobile_Search notify navbar-toggle">
                         <div class="header-mobile-search-box">
                             <div class="h-m-s-box">
                                 <i class="ion-ios-search-strong"></i>
                                 <input type="text" placeholder="Search">
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                     <a class="navbar-brand" href="index.html">
-                        <img src="assets/images/header_logo.png" class="logo_c"> </a>
+                        <img src="assets/images/Logo.png" class="logo_c"> </a>
                 </div>
                 <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav ">
-                        <form role="search">
-                            <div class="header-search-box">
-                                <div class="h-s-box">
-                                    <i class="ion-ios-search-strong"></i>
-                                    <input type="text" placeholder="Search Product or Food">
-                                </div>
-                            </div>
-                        </form>
-
-                    </ul>
+                    
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown  notify">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <span class="notify-row">
                                     <span class="bell ">
-                                        <i class="ion-ios-location-outline"></i>Location<i
-                                            class="ion-chevron-down adown"></i>
+                                        <i class="ion-ios-location-outline"></i>Adayar  
                                     </span>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu extended tasks-bar">
-                                <div class="notify-arrow notify-arrow-green"></div>
-                                <div class="search-box">
-                                    <h3 class="header">Where do you want the delivery?</h3>
-                                    <div class="deliver-section">
-                                        Deliver in : <span class="clr_green">Gurugram</span>
-                                    </div>
-                                    <div class="location-selection">
-                                        <p>——— Or Select your city ———</p>
-                                        <h1>Top Searched Cities</h1>
-                                        <span class="city_tag">
-                                            New York
-                                        </span>
-                                        <span class="city_tag">
-                                            Brooklyn
-                                        </span>
-                                        <span class="city_tag">
-                                            Chicago
-                                        </span>
-                                        <div class="location-search-box">
-                                            <i class="location-seach-icon ion-ios-search"></i>
-                                            <input type="text" class="search-input"
-                                                placeholder="Address, city, zip code or state">
-                                            <button class="auto-detect-btn"><i
-                                                    class="ion-android-locate"></i>Detect</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ul>
                         </li>
-                        <li class="dropdown  notify">
-                            <a href="#" class="dropdown-toggle" data-toggle="modal" data-target="#myModal2">
+                        <li class="dropdown  notify mycart-check">
+                            <a href="#" id="mycartoption" class="dropdown-toggle" data-toggle="dropdown">
                                 <span class="notify-row">
                                     <span class="bell ">
                                         <i class="ion-ios-cart-outline"></i> My Cart
@@ -116,6 +217,20 @@
                                     </span>
                                 </span>
                             </a>
+                            <ul class="dropdown-menu extended tasks-bar">
+                                <div class="notify-arrow notify-arrow-green"></div>
+                                <li>
+                                    <p class="header">You have 0 Items In your cart</p>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        No item available.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-center">View All</a>
+                                </li>
+                            </ul>
                         </li>
 
 
@@ -171,313 +286,1013 @@
                 </div>
             </div>
         </nav>
+        <div id="main" class="main search_result">
 
-        <div id="main" class="main">
-            <div div class="hero">
-                <div id="product categories" class="categories">
-                    <div class="container">
-                        <div class="row">
+            
+            <!-- newshop card -->
+            <!-- shop name : ${store.name} -->
+            <!-- stop address : ${ store.addressDisplay } -->
 
-                            <div class="result_details container">
+            <!-- end of new shop card -->
+
+            <!-- new search card -->
+            <div class="result_details container-fluid cus-search-details-wrap mt20">
                                 <div class="row">
                                     <div class="col-sm-4 border-right">
-                                        <p class="seller-text">Guru Groceries and Chaat House
-                                            <span class="rating-div"> 4.1 <span>/5</span></span>
+                                        <p class="seller-text">Guru Groceries and Chaat House 
+                                            <!-- <span class="rating-div"> 4.1 <span>/5</span></span> -->
                                             <span class="seller-subtext">4119 Travilah Rd, MD 20850,</span>
                                             <span class="near-by">Phone No : +91 13013185600 </span> </p>
                                     </div>
-                                    <div class="col-sm-4 border-right"></div>
-                                    <div class="col-sm-2 border-right">
-                                        <div class="result-text">
-                                            <p class="r-sub-text">Opening hours: Open</p>
-                                            <span class="r-details"> 5:00pm - 9:00pm</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2  border-right">
-                                        <div class="result-text">
-                                            <p class="r-sub-text">Delivery EAT: </p>
-                                            <span class="r-details"> 30 - 45 min</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="result_details container">
-                                <div class="row">
-                                    <div class="col-sm-9 border-right">
-                                        <div class="result-text">
-                                            <p class="r-sub-text">Refine Results <a href="#" class="filter-clear">Clear
-                                                    All</a> </p>
-                                            <span class="filter-tag">All</span>
-                                            <span class="filter-tag">Beverages</span>
-                                            <span class="filter-tag">Condiments</span>
-                                            <span class="filter-tag">Groceries</span>
-                                            <span class="filter-tag">Health & Beauty</span>
-                                            <span class="filter-tag">More...</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 border-top border-right">
+                                    
+                                    <div class="col-sm-6 border-top">
                                         <div class="result-text">
                                             <p class="r-sub-text">Search </p>
                                             <div class="">
                                                 <div class="h-s-box" style="width: auto;">
                                                     <i class="ion-ios-search-strong"></i>
-                                                    <input type="text" placeholder="Search Product or Food"
-                                                        style="width: 100%;">
+                                                    <input type="text" placeholder="Search Product or Food" style="width: 100%;">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>                                
+                            </div>
+            <!-- end of search card -->
+            <div class="result-show">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 text-left">
+                            <p>
+                                <span class="">
+                                    <strong>Search Result</strong>
+                                </span> Bread (12)
+                            </p>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <span class="search-bycat" style="visibility: hidden;" >                                
+                                <strong>Search by Catgories</strong>                               
+                            </span>
+                            <span class="search-bybrand" data-toggle="modal" data-target="#searchByBrand">                                
+                                <strong>Search by Brand</strong>                               
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- https://www.bootply.com/ppJgfWpd08-->
+
+            <div id="Produce" class=" inner_popular">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 text-center filer_box menu-categories-head" id="categoriesFilter">
+                            <!-- <div class="filter_toggle"><i class="ion-chevron-left icon_f"> Hide</i></div> -->
+                            <button type="button" class="catclose close" style="visibility: hidden;">&times;</button>
+                            <p class="cus-store-categories">Store Categories </p>
+                            <div class="sidebar clearfix m-b-20 text-left " >
+                                <div class="main-block grocery_filter">
+                                    <div class="mega-menu">
+                                        <ul>
+                                            <li class="menu-item menu-1">
+                                                <a href="#">Rice</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Rice</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <!-- <div class="section promotions">
+                                                            <a href="#" class="promo promo 2">
+                                                                <img src="assets/images/pro_20189.jpg" class="thumb" />
+                                                            </a>
+                                                        </div> -->
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-2">
+                                                <a href="#">Flour & Atta</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Flour & Atta</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-3">
+                                                <a href="#">Dals & Pulses</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Dals & Pulses</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-4">
+                                                <a href="#">Vegetables & Fruits</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Vegetables & Fruits</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-5">
+                                                <a href="#">Dairy & Eggs</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Dairy & Eggs</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-6">
+                                                <a href="#">Oil & Ghee</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Oil & Ghee</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-7">
+                                                <a href="#">Spices</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Spices</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-8">
+                                                <a href="#">Pastes & Sauces</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Pastes & Sauces</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu-item menu-9">
+                                                <a href="#">Coffee & Tea</a>
+                                                <div class="mega-submenu">
+                                                    <h2>Coffee & Tea</h2>
+                                                    <div class="submenu-content">
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="section links">
+                                                            <ul>
+                                                                <li><a href="#">Lorem Ipsum 1</a></li>
+                                                                <li><a href="#">Lorem Ipsum 2</a></li>
+                                                                <li><a href="#">Vitamin A</a></li>
+                                                                <li><a href="#">Vitamin B</a></li>
+                                                                <li><a href="#">Vitamin C</a></li>
+                                                                <li><a href="#">Asam Folat</a></li>
+                                                                <li><a href="#">Vitamin E</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+
                                 </div>
 
-                                <div class="row">
-                                    <!-- <div class="col-sm-4 border-top border-right">
-                                        <div class="result-text">
-                                            <p class="r-sub-text">Choose Rating </p>
-                                            <span class="filter-tag">1 <i class="ion-ios-star-outline"></i></span>
-                                            <span class="filter-tag">2 <i class="ion-ios-star-outline"></i></span>
-                                            <span class="filter-tag">3 <i class="ion-ios-star-outline"></i></span>
-                                            <span class="filter-tag">4 <i class="ion-ios-star-outline"></i></span>
-                                            <span class="filter-tag">5 <i class="ion-ios-star-outline"></i></span>
-                                        </div>
-                                    </div> -->
-                                </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/23664a.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Aashirvaad Shudh Chakki Whole Wheat
-                                                            Atta</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <div class="item-buttons pull-right">
-                                                            <div class="add-to-cart-btns">
-                                                                <button type="button" class="sub"><i
-                                                                        class="ion-minus"></i></button>
-                                                                <input type="text" id="1" value="0" class="field" disabled />
-                                                                <button type="button" class="add"><i
-                                                                        class="ion-plus"></i></button>
-                                                            </div>
+
+
+
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 menu_listing_box">
+
+                            <div class="grocery_result_box">
+                                <div class="">
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/23664a.jpg') center center/cover no-repeat;background-size: contain;">
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Red Label Tea</a>
+                                                </h5>
+                                                <div class="product-name">500g </div>
+                                                <div class="product-desc line-clamp line-clamp-2">The taste of Brooke Bond Red Label tea helps
+                                                    you
+                                                    spread warmth</div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 159.9</span>
+                                                    <span class="price">Rs 159.9</span>
+                                                    <button type="button" id="prodOne"  class="theme-btn-dash pull-right">
+                                                            <i class="ion-ios-cart-outline"></i> Add 
+                                                    </button>
+                                                    <div class="item-buttons pull-right" id="prodOneCart" hidden>
+                                                        <div class="add-to-cart-btns">
+                                                            <button type="button" class="sub">
+                                                                <i class="ion-minus"></i>
+                                                            </button>
+                                                            <input type="text" id="1" value="1" name="prodaddtocart1" class="field" disabled />
+                                                            <button type="button" id="prodaddtocart1" class="add">
+                                                                <i class="ion-plus"></i>
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/124472a.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Grain And Oil Seed</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
 
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/124472a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_14626.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Organic Produce</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Dove Bathing Bar</a>
+                                                </h5>
+                                                <div class="product-name">3 X 100g </div>
+                                                <div class="product-desc line-clamp line-clamp-2">For skin that looks soft, smooth and radiant,
+                                                    turn
+                                                    to the Dove Beauty Bar.</div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 182</span>
+                                                    <span class="price">Rs 150</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                            <i class="ion-ios-cart-outline"></i> Add </a>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
 
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_20189.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_14626.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
                                                 </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Vegetables</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Fortune Sunflower Refined Oil</a>
+                                                </h5>
+                                                <div class="product-name">1 </div>
+                                                <div class="product-desc line-clamp line-clamp-2">Refined vegetable oil is a preferred cooking
+                                                    medium
+                                                    used .</div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 456.00</span>
+                                                    <span class="price">Rs 356.00</span>
+                                                    <!-- <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add
+                                                    </a> -->
+                                                    <div class="item-buttons pull-right">
+                                                        <div class="add-to-cart-btns">
+                                                            <button type="button" class="sub">
+                                                                <i class="ion-minus"></i>
+                                                            </button>
+                                                            <input type="text" id="1" value="0" class="field" disabled />
+                                                            <button type="button" class="add">
+                                                                <i class="ion-plus"></i>
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_55389.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Grain And Oil Seed</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
 
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_20189.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Tang Orange Instant Drink Mix</a>
+                                                </h5>
+                                                <div class="product-name">750 gm Pouch </div>
+                                                <div class="product-desc line-clamp line-clamp-2">Tang is a fruit-flavored drink. It was
+                                                    formulated
+                                                    by General Foods</div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 150.00</span>
+                                                    <span class="price">Rs 160.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/23664a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Red Label Tea</a>
+                                                </h5>
+                                                <div class="product-name">500g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 159.9</span>
+                                                    <span class="price">Rs 159.9</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_68615.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Organic Produce</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
 
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/124472a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Dove Bathing Bar</a>
+                                                </h5>
+                                                <div class="product-name">3 X 100g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 182</span>
+                                                    <span class="price">Rs 150</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_14626.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Fortune Sunflower Refined Oil</a>
+                                                </h5>
+                                                <div class="product-name">1 </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 456.00</span>
+                                                    <span class="price">Rs 356.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_68615.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Organic Produce</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
 
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_20189.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Tang Orange Instant Drink Mix</a>
+                                                </h5>
+                                                <div class="product-name">750 gm Pouch </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 150.00</span>
+                                                    <span class="price">Rs 160.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/23664a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Red Label Tea</a>
+                                                </h5>
+                                                <div class="product-name">500g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 159.9</span>
+                                                    <span class="price">Rs 159.9</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="col-xs-12 col-sm-6 col-md-3  food-item">
-                                            <div class="food-item-wrap">
-                                                <div class="figure-wrap bg-image"
-                                                    style="background:url('assets/images/pro_68615.jpg') center center/cover no-repeat;background-size: 200px;">
-                                                   
-                                                </div>
-                                                <div class="content">
-                                                    <h5>
-                                                        <a href="product_page.html">Organic Produce</a>
-                                                    </h5>
-                                                    <div class="product-name">12 KG <a
-                                                            href="search_list_new_grocery_owne.html"
-                                                            class="seller-name">Sold by: Guru Groceries and Chaat
-                                                            House</a></div>
-                                                    <div class="price-btn-block">
-                                                        
-                                                        <span class="price">Rs 15,99</span>
-                                                        <a href="#" class="theme-btn-dash pull-right">
-                                                            <i class="ion-ios-cart-outline"></i> Add to cart</a>
-                                                    </div>
-                                                </div>
 
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/124472a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Dove Bathing Bar</a>
+                                                </h5>
+                                                <div class="product-name">3 X 100g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 182</span>
+                                                    <span class="price">Rs 150</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_14626.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Fortune Sunflower Refined Oil</a>
+                                                </h5>
+                                                <div class="product-name">1 </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 456.00</span>
+                                                    <span class="price">Rs 356.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_20189.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Tang Orange Instant Drink Mix</a>
+                                                </h5>
+                                                <div class="product-name">750 gm Pouch </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 150.00</span>
+                                                    <span class="price">Rs 160.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/23664a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Red Label Tea</a>
+                                                </h5>
+                                                <div class="product-name">500g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 159.9</span>
+                                                    <span class="price">Rs 159.9</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/124472a.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Dove Bathing Bar</a>
+                                                </h5>
+                                                <div class="product-name">3 X 100g </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 182</span>
+                                                    <span class="price">Rs 150</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_14626.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Fortune Sunflower Refined Oil</a>
+                                                </h5>
+                                                <div class="product-name">1 </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 456.00</span>
+                                                    <span class="price">Rs 356.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-lg-3 col-sm-6 food-item">
+                                        <div class="food-item-wrap">
+                                            <div class="figure-wrap bg-image" style="background:url('assets/images/pro_20189.jpg') center center/cover no-repeat;background-size: contain;">
+                                                
+                                                <div class="rating pull-left">
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star"></i>
+                                                    <i class="ion-ios-star-o"></i>
+                                                </div>
+                                                <div class="review pull-right">
+                                                    <a href="#">198 reviews</a>
+                                                </div>
+                                            </div>
+                                            <div class="content">
+                                                <h5>
+                                                    <a href="#">Tang Orange Instant Drink Mix</a>
+                                                </h5>
+                                                <div class="product-name">750 gm Pouch </div>
+                                                <div class="price-btn-block">
+                                                    <span class="price_cut">Rs 150.00</span>
+                                                    <span class="price">Rs 160.00</span>
+                                                    <a href="#" class="theme-btn-dash pull-right">
+                                                        <i class="ion-plus-circled"></i> Add</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <button class="load-more">Load More <i class="ion-chevron-down adown"></i></button>
-                                </div>
+                            <div class="col-sm-12 text-center">
+                                <a class="btn btn-action btn-gplus wow fadeInDown" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                                    <span>
+                                        <i class="ion-chevron-down"></i>
+                                    </span>
+                                    <span href="#">More</span>
+                                </a>
                             </div>
-
                         </div>
 
+                        <div class="col-xs-12 col-sm-2 col-md-2 text-center brand_box cus-brand-show" hidden>
+                    
+                            <img class="brand_image" src="assets/images/dove-553256d.jpg">
 
+                            <img class="brand_image" src="assets/images/b_8.png">
+
+                            <img class="brand_image" src="assets/images/b_3.png">
+
+                            <img class="brand_image" src="assets/images/b_4.png">
+
+                            <img class="brand_image" src="assets/images/b_5.png">
+
+                            <img class="brand_image" src="assets/images/b_6.png">
+
+                            <img class="brand_image" src="assets/images/b_7.png">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer">
+
+            <div class="subscribe">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <span class="sub_text">Subscribe us for getting the calander deals & discount</span>
+                        </div>
+                        <div class="col-sm-4 text-center">
+                            <div class="in_center">
+                                <input class="btn btn-lg input_frm" name="email" id="email" type="email" placeholder="Enter Your Email"
+                                    required>
+                                <button class="btn btn-action Subscribe_btn nomargin" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-9 col-md-9 col-xs-12">
@@ -502,8 +1317,9 @@
 
             </div>
         </div>
+        </div>
     </div>
-    </div>
+
 
 
     <script type="text/javascript" src="assets/js/jquery-2.1.1.js"></script>
@@ -511,8 +1327,38 @@
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins.js"></script>
     <script type="text/javascript" src="assets/js/validator.js"></script>
+    <script type="text/javascript" src="assets/js/typeahead.bundle.js"></script>
     <script type="text/javascript" src="assets/js/custom.js"></script>
-    <script type="text/javascript" src="assets/js/bloodhound.js"></script>
+
+    <script type="text/javascript">
+
+        $( document ).ready(function() {
+            $("#prodOne").click(function(){
+                 $(this).hide();
+                 $('#prodOneCart').show();
+                 opencart();
+            });
+
+               // search categ
+
+                $('.search-bycat').click(function(){
+                    $("#categoriesFilter").addClass("showmenu");
+                });
+                 $('.catclose').click(function(){
+                    $("#categoriesFilter").removeClass("showmenu");
+                });
+                
+        });
+        
+
+function opencart(){
+
+     $('#mycartoption').collapse("toggle");
+     // $("#mycartoption").attr("aria-expanded","true");
+         // alert("sd");
+}
+        
+    </script>
 </body>
 
 </html>
