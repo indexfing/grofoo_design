@@ -12,8 +12,6 @@ jQuery(function ($) {
     }
   });
 
-  
-  $('#location_popup').modal('show');
 
   $(document).on('click.nav', '.navbar-collapse.in', function (e) {
     if ($(e.target).is('a')) {
@@ -56,6 +54,7 @@ jQuery(function ($) {
   });
 
   $(".final_product").owlCarousel({
+
     slideSpeed: 200,
     items: 1,
     singleItem: true,
@@ -77,39 +76,11 @@ jQuery(function ($) {
     scrollPerPage: false
   });
 
-  $("#owl_Veggies").owlCarousel({
-
-    autoPlay: 30000, //Set AutoPlay to 3 seconds
-
-    items: 5,
-    itemsDesktop: [1199, 3],
-    itemsDesktopSmall: [979, 3],
-    navigation: true,
-    navigationText: ["<i class='ion-ios-arrow-back icon_arrow'></i>", "<i class='ion-ios-arrow-forward icon_arrow'></i>"],
-    rewindNav: true,
-    pagination: false,
-    scrollPerPage: false
-  });
-
-  $("#owl_trending_items").owlCarousel({
-
-    autoPlay: 30000, //Set AutoPlay to 3 seconds
-
-    items: 5,
-    itemsDesktop: [1199, 3],
-    itemsDesktopSmall: [979, 3],
-    navigation: true,
-    navigationText: ["<i class='ion-ios-arrow-back icon_arrow'></i>", "<i class='ion-ios-arrow-forward icon_arrow'></i>"],
-    rewindNav: true,
-    pagination: false,
-    scrollPerPage: false
-  });
-
   $("#owl_product_suggested").owlCarousel({
 
     autoPlay: 30000, //Set AutoPlay to 3 seconds
 
-    items: 5,
+    items: 8,
     itemsDesktop: [1199, 3],
     itemsDesktopSmall: [979, 3],
     navigation: true,
@@ -123,7 +94,7 @@ jQuery(function ($) {
 
     autoPlay: 30000, //Set AutoPlay to 3 seconds
 
-    items: 5,
+    items: 8,
     itemsDesktop: [1199, 3],
     itemsDesktopSmall: [979, 3],
     navigation: true,
@@ -137,7 +108,7 @@ jQuery(function ($) {
 
     autoPlay: 30000, //Set AutoPlay to 3 seconds
 
-    items: 5,
+    items: 8,
     itemsDesktop: [1199, 3],
     itemsDesktopSmall: [979, 3],
     navigation: true,
@@ -151,7 +122,7 @@ jQuery(function ($) {
 
     autoPlay: 30000, //Set AutoPlay to 3 seconds
 
-    items: 5,
+    items: 8,
     itemsDesktop: [1199, 3],
     itemsDesktopSmall: [979, 3],
     navigation: true,
@@ -174,16 +145,8 @@ jQuery(function ($) {
     pagination: false,
     scrollPerPage: false
   });
-  $("#s_r_f_sucess_msg_box").hide();
-  $("#id_add_now").click(function(){
-    $("#s_r_f_content").toggle('hidden');
-    $("#s_r_f_sucess_msg_box").toggle('hidden');
-  });
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-  
+
   $("#owl_brand").owlCarousel({
 
     autoPlay: 30000, //Set AutoPlay to 3 seconds
@@ -198,203 +161,90 @@ jQuery(function ($) {
     scrollPerPage: false
   });
 
-  // $(document).ready(function () {
-
-  //   var ctx = document.getElementById("myChart");
-  //   var myChart = new Chart(ctx, {
-  //     type: 'line',
-  //     data: {
-  //       labels: ["jul4", "jul6", "jul8", "jul10", "jul12", "jul14"],
-  //       datasets: [{
-  //         label: 'hourly order value',
-  //         data: [12, 19, 3, 5, 2, 3],
-  //         backgroundColor: [
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)'
-  //         ],
-  //         borderColor: [
-  //           'rgba(142, 196, 73,1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)'
-  //         ],
-  //         borderWidth: 1
-  //       }],
-  //     },
-  //     options: {
-  //       responsive: true,
-  //       scales: {
-  //         yAxes: [{
-  //           ticks: {
-  //             beginAtZero: true
-  //           }
-  //         }]
-  //       }
-  //     }
-  //   });
-
-
-  //   var ctx = document.getElementById("myChart2");
-  //   var myChart2 = new Chart(ctx, {
-  //     type: 'line',
-  //     data: {
-  //       labels: ["jul4", "jul6", "jul8", "jul10", "jul12", "jul14"],
-  //       datasets: [{
-  //         label: 'hourly order count',
-  //         data: [12, 19, 3, 5, 2, 3],
-  //         backgroundColor: [
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)',
-  //           'rgba(142, 196, 73, 0.2)'
-  //         ],
-  //         borderColor: [
-  //           'rgba(142, 196, 73,1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)',
-  //           'rgba(142, 196, 73, 1)'
-  //         ],
-  //         borderWidth: 1
-  //       }],
-  //     },
-  //     options: {
-  //       responsive: true,
-  //       scales: {
-  //         yAxes: [{
-  //           ticks: {
-  //             beginAtZero: true
-  //           }
-  //         }]
-  //       }
-  //     }
-  //   });
-
-  // });
-
-
-
-   
-
   $(document).ready(function () {
 
-      var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
-      var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
-
-      chart.data = [
-        {
-          name: "Product Name",
-          children: [
-            {
-              name: "Service",
-              children: [
-                { name: "Services S1", value: 100 },
-                { name: "Services S2", value: 60 }
-              ]
-            },
-            {
-              name: "Ingredient",
-              children: [
-                { name: "Salt", value: 135 },
-                { name: "Sugar", value: 98 },
-                { name: "Milk", value: 98 }
-              ]
-            },
-            {
-              name: "Food Additive",
-              children: [
-                {
-                  name: "C1",
-                  children: [
-                    { name: "EE1", value: 130 },
-                    { name: "EE2", value: 87 },
-                    { name: "EE3", value: 55 }
-                  ]
-                },
-                { name: "C2", value: 148 },
-                {
-                  name: "C3", children: [
-                    { name: "CC1", value: 53 },
-                    { name: "CC2", value: 30 }
-                  ]
-                },
-                { name: "C4", value: 26 }
-              ]
-            },
-            {
-              name: "Food Item",
-              children: [
-                { name: "D1", value: 415 },
-                { name: "D2", value: 148 },
-                { name: "D3", value: 89 }
-              ]
-            },
-            {
-              name: "Codex No",
-              children: [
-                {
-                  name: "E1",
-                  children: [
-                    { name: "EE1", value: 33 },
-                    { name: "EE2", value: 40 },
-                    { name: "EE3", value: 89 }
-                  ]
-                },
-                {
-                  name: "E2",
-                  value: 148
-                }
-              ]
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["jul4", "jul6", "jul8", "jul10", "jul12", "jul14"],
+        datasets: [{
+          label: 'hourly order value',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)'
+          ],
+          borderColor: [
+            'rgba(142, 196, 73,1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)'
+          ],
+          borderWidth: 1
+        }],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
             }
-
-          ]
+          }]
         }
-      ];
+      }
+    });
 
-      networkSeries.dataFields.value = "value";
-      networkSeries.dataFields.name = "name";
-      networkSeries.dataFields.children = "children";
-      networkSeries.nodes.template.tooltipText = "{name}:{value}";
-      networkSeries.nodes.template.fillOpacity = 1;
 
-      networkSeries.nodes.template.label.text = "{name}"
-      networkSeries.fontSize = 10;
-
-      networkSeries.links.template.strokeWidth = 1;
-
-      var hoverState = networkSeries.links.template.states.create("hover");
-      hoverState.properties.strokeWidth = 3;
-      hoverState.properties.strokeOpacity = 1;
-
-      networkSeries.nodes.template.events.on("over", function (event) {
-        event.target.dataItem.childLinks.each(function (link) {
-          link.isHover = true;
-        })
-        if (event.target.dataItem.parentLink) {
-          event.target.dataItem.parentLink.isHover = true;
+    var ctx = document.getElementById("myChart2");
+    var myChart2 = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["jul4", "jul6", "jul8", "jul10", "jul12", "jul14"],
+        datasets: [{
+          label: 'hourly order count',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)',
+            'rgba(142, 196, 73, 0.2)'
+          ],
+          borderColor: [
+            'rgba(142, 196, 73,1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)',
+            'rgba(142, 196, 73, 1)'
+          ],
+          borderWidth: 1
+        }],
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
         }
+      }
+    });
 
-      })
+  });
 
-      networkSeries.nodes.template.events.on("out", function (event) {
-        event.target.dataItem.childLinks.each(function (link) {
-          link.isHover = false;
-        })
-        if (event.target.dataItem.parentLink) {
-          event.target.dataItem.parentLink.isHover = false;
-        }
-      })
 
-    }); // end am4core.ready()
 
 
   $(".clients").owlCarousel({
@@ -472,63 +322,36 @@ jQuery(function ($) {
     $(elem).prev().find('a[data-toggle="tab"]').click();
   }
 
-  if ($('.r-sub-text').length > 0) {
-    var slider = document.getElementById("distance-range");
-    var output = document.getElementById("distance-value");
-
-    output.innerHTML = slider.value;
-
-    slider.oninput = function () {
-      output.innerHTML = this.value;
-    }
-  }
 
   // checkout process function :
 
+  $(document).ready(function () {
+    //Initialize tooltips
+    $('.nav-tabs > li a[title]').tooltip();
 
-  //Initialize tooltips
-  $('.nav-tabs > li a[title]').tooltip();
-  $('#cart-final-total').hide();
+    //wizard checkout
+    $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
 
-  $(".close").click(function (e) {
-    $('.checkout-box').show();
-  });
+      var $target = $(e.target);
 
-  //wizard checkout
-  $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+      if ($target.parent().hasClass('disabled')) {
+        return false;
+      }
+    });
 
-    var $target = $(e.target);
-    if ($target.context.dataset.originalTitle === 'Payment & Billing') {
-      $('#cart-final-total').show();
-      $('.tab-content').addClass('payment_bill');
-    } else {
-      $('#cart-final-total').hide();
-      $('.tab-content').removeClass('payment_bill');
-    }
-    if ($target.context.dataset.originalTitle === 'Complete') {
-      $('.checkout-box').hide();
-      $('.tab-content').addClass('checkout_completed');
-    } else {
-      $('.tab-content').removeClass('checkout_completed');
-      $('.checkout-box').show();
-    }
-    if ($target.parent().hasClass('disabled')) {
-      return false;
-    }
-  });
+    $(".next-step-checkout").click(function (e) {
 
-  $(".next-step-checkout").click(function (e) {
+      var $active = $('.wizard_checkout .nav-tabs li.active');
+      $active.next().removeClass('disabled');
+      nextTab($active);
 
-    var $active = $('.wizard_checkout .nav-tabs li.active');
-    $active.next().removeClass('disabled');
-    nextTab($active);
+    });
+    $(".prev-step-checkout").click(function (e) {
 
-  });
-  $(".prev-step-checkout").click(function (e) {
+      var $active = $('.wizard_checkout .nav-tabs li.active');
+      prevTab($active);
 
-    var $active = $('.wizard_checkout .nav-tabs li.active');
-    prevTab($active);
-
+    });
   });
 
   function nextTab(elem) {
@@ -619,32 +442,6 @@ $("#id-farmer").change(function () {
 
 });
 
-$(':radio[id=Grocery]').change(function() {
-  $("#Grocery_btn").removeClass("remove_btn");
-  $("#Restaurant_btn").addClass("remove_btn");
-  $("#Veggies_btn").addClass("remove_btn");
-});
-$(':radio[id=Restaurant]').change(function() {
-  $("#Restaurant_btn").removeClass("remove_btn");
-  $("#Grocery_btn").addClass("remove_btn");
-  $("#Veggies_btn").addClass("remove_btn");
-});
-$(':radio[id=veggies]').change(function() {
-  $("#Restaurant_btn").addClass("remove_btn");
-  $("#Grocery_btn").addClass("remove_btn");
-  $("#Veggies_btn").removeClass("remove_btn");
-});
-
-
-$('.add').click(function () {
-  $(this).prev().val(+$(this).prev().val() + 1);
-});
-$('.sub').click(function () {
-  if ($(this).next().val() > 0) 
-    $(this).next().val(+$(this).next().val() - 1);
-    
-});
-
 $(document).ready(function () {
   $('.filterable .btn-filter').click(function () {
     var $panel = $(this).parents('.filterable'),
@@ -696,9 +493,6 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 // mega menu toggle class
 
 $(document).ready(function () {
@@ -715,15 +509,15 @@ $(document).ready(function () {
 
     $(this).parents('.row').find('.brand_box').toggleClass('col-md-2 col-md-1');
 
-    if (!($('.menu_listing_box').hasClass('col-md-10'))) {
+    if(!($('.menu_listing_box').hasClass('col-md-10'))){
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-8 col-md-9');
-    } else {
+    }else{
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-10 col-md-9');
     }
 
-    if ($('.brand_box').hasClass('col-md-1') && $('.filer_box').hasClass('col-md-1')) {
+    if($('.brand_box').hasClass('col-md-1') && $('.filer_box').hasClass('col-md-1')){
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-8 col-md-10');
-    }
+    } 
 
   });
   $(".filter_toggle").click(function () {
@@ -737,15 +531,15 @@ $(document).ready(function () {
 
     $(this).parents('.row').find('.filer_box').toggleClass('col-md-2 col-md-1');
 
-    if (!($('.menu_listing_box').hasClass('col-md-10'))) {
+    if(!($('.menu_listing_box').hasClass('col-md-10'))){
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-8 col-md-9');
-    } else {
+    }else{
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-10 col-md-9');
     }
-
-    if ($('.brand_box').hasClass('col-md-1') && $('.filer_box').hasClass('col-md-1')) {
+    
+    if($('.brand_box').hasClass('col-md-1') && $('.filer_box').hasClass('col-md-1')){
       $(this).parents('.row').find('.menu_listing_box').toggleClass('col-md-8 col-md-10');
-    }
+    } 
 
   });
 });
@@ -758,7 +552,7 @@ $(document).ready(function () {
   var Brands = ['Amul', 'Nestle', 'Dabur', 'Haldiram', 'Britannia', 'Godrej', 'Himalaya', 'Santoor', 'Nirma', 'Park Avenue'];
   var Products = ['Red Label Tea', 'Dove Bathing Bar', 'Fortune Sunflower Refined Oil', 'Tang Orange Instant Drink Mix', 'Bread - Brown, Chemical Free', 'Eggs - Table Tray', 'Sugar - Refined', 'Paratha - Onion', 'Fancy Bites Fryums - Biscuits', 'Nachoz - Sizzling Peri Peri'];
 
-
+  
   // Constructing the suggestion engine
   var Categories = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
@@ -778,7 +572,7 @@ $(document).ready(function () {
     local: Products
   });
 
-
+  
 
   // Initializing the typeahead
   $('.header_search_box .typeahead').typeahead({
@@ -822,28 +616,27 @@ $(document).ready(function () {
       }
     });
 
-  /* location search list */
-  var Locations = ['USA', 'Canada', 'Netherlands', 'TX USA', 'Canada', 'Argentina', 'Germany', 'Spain', 'IL USA', 'Mexico'];
-
-  var Locations = new Bloodhound({
-    datumTokenizer: Bloodhound.tokenizers.whitespace,
-    queryTokenizer: Bloodhound.tokenizers.whitespace,
-    local: Locations
-  });
-  $('.location_search .typeahead').typeahead({
-    hint: true,
-    highlight: true, /* Enable substring highlighting */
-    minLength: 1 /* Specify minimum characters required for showing result */
-  },
-    {
-      name: 'Locations',
-      source: Locations,
-      templates: {
-        header: '<h3 class="league-name">Locations</h3>',
-        empty: '<div class="empty-text"> No Locations Found! </div>'
+    /* location search list */
+    var Locations = ['USA', 'Canada', 'Netherlands', 'TX USA', 'Canada', 'Argentina', 'Germany', 'Spain', 'IL USA', 'Mexico'];
+    
+    var Locations = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace,
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      local: Locations
+    });
+    $('.location_search .typeahead').typeahead({
+      hint: true,
+      highlight: true, /* Enable substring highlighting */
+      minLength: 1 /* Specify minimum characters required for showing result */
+    },
+      {
+        name: 'Locations',
+        source: Locations,
+        templates: {
+          header: '<h3 class="league-name">Locations</h3>',
+          empty: '<div class="empty-text"> No Locations Found! </div>'
+        }
       }
-    }
-  );
-});
-
-
+    );  
+    
+}); 

@@ -653,7 +653,7 @@ body {
     border-right: 1px solid #eaebeb !important;
   }
   .mega-menu > ul > li:hover .mega-submenu {
-    width: 572px !important;
+    width: 480px !important;
   }
 }
 
@@ -7514,7 +7514,7 @@ div#final_product {
   position: absolute;
 }
 
-.mega-menu > ul > li:hover .mega-submenu {
+/*.mega-menu > ul > li:hover .mega-submenu {
   padding: 16px 20px;
   background-color: #fff;
   color: #fff;
@@ -7533,7 +7533,29 @@ div#final_product {
   left: 100%;
   z-index: 99;
 }
+*/
+/*new left menu*/
+.mega-menu > ul > li:hover .mega-submenu {
+  padding: 16px 20px;
+  background-color: #fff;
+  color: #fff;
+  border: 1px solid #eaebeb;
+  width: 808px;
+  min-height: 100%;
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.13);
+  /*background-image: url(../images/offer_bg.png), url(../images/pattern.png);*/
+  background-repeat: repeat-x, repeat;
+  background-position: bottom, center;
+  background-size: contain;
+  overflow: hidden;
+  visibility: visible;
+  top: -1px;
+  right: 0;
+  left: 100%;
+  z-index: 99;
+}
 
+/*End of new menu left*/
 .mega-submenu h2 {
   color: #5ad45a;
   line-height: 16px;
@@ -7783,7 +7805,6 @@ div#final_product {
 }
 
 /* end of enable the menu in ipad mode  */
-
 /* New home page  */
 
 .Grofoo-home .bell {
@@ -10384,7 +10405,7 @@ button:focus {
     margin-top: 0px !important;
   }
   .Grofoo-home .navbar-collapse {
-    min-height: 340px;
+    /*min-height: 340px;*/
     max-height: auto;
     border-bottom: 1px solid #e7eaed;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.176) !important;
@@ -11520,4 +11541,155 @@ p.err_msg_login {
     font-size: 12px !important;
     color: red !important;
     margin-top: 9px;
+}	
+.mt20{
+	margin-top: 20px;
+}
+.cus-store-details-wrap,
+.cus-search-details-wrap,
+.cus-align-menu-store{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.search-bybrand,
+.search-bycat{
+    background: #fe9000;
+    color: white;
+    padding: 7px 10px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: none !important;
+    border: 0px !important;
+}
+
+.search-bycat{
+  margin-right: 15px;
+}
+.brand_box.cus-brand-show.active {
+    display: block;
+    position: absolute;
+    background: white;
+    right: 0;
+    max-width: 180px;
+    border: 1px solid #5a5a5a;
+}
+.brand_image-model img {
+    /*max-width: 212px;*/
+    height: 119px;
+    padding: 19px;
+    border: 1px solid #f3f3f3;
+}
+#searchByBrand .modal-dialog {
+    width: 60%;
+}
+#searchByBrand .modal-body {
+    max-height: 480px;
+    overflow-y: scroll;
+}
+.cus-store-categories{
+	width: 100%;
+    background: #5fd260;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Begin required CSS. */
+.line-clamp
+{
+  display            : block;
+  display            : -webkit-box;
+  -webkit-box-orient : vertical;
+  position           : relative;
+
+  line-height        : 1.2;
+  overflow           : hidden;
+  text-overflow      : ellipsis;
+  padding            : 0 !important;
+}
+.line-clamp:after
+{
+  content    : '...';
+  text-align : right;
+  bottom     : 0;
+  right      : 0;
+  width      : 25%;
+  display    : block;
+  position   : absolute;
+  height     : calc(1em * 1.2);
+  background : linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+}
+@supports (-webkit-line-clamp: 1)
+{
+  .line-clamp:after
+  {
+    display : none !important;
+  }
+}
+.line-clamp-1
+{
+  -webkit-line-clamp : 1;
+  height             : calc(1em * 1.2 * 1);
+}
+.line-clamp-2
+{
+  -webkit-line-clamp : 2;
+  height             : calc(1em * 1.2 * 2);
+}
+.line-clamp-3
+{
+  -webkit-line-clamp : 3;
+  height             : calc(1em * 1.2 * 3);
+}
+.line-clamp-4
+{
+  -webkit-line-clamp : 4;
+  height             : calc(1em * 1.2 * 4);
+}
+.line-clamp-5
+{
+  -webkit-line-clamp : 5;
+  height             : calc(1em * 1.2 * 5);
+}
+
+#searchByBrand .modal-title{
+      color: #000000;
+    font-weight: 800;
+    text-align: center;
+    background: #f7f9fa;
+}
+@media screen and (max-width: 1199px){
+  #categoriesFilter{
+    position: absolute;
+    margin-left: -992px;
+    z-index: 1000;
+  }
+  .search-bycat{
+    visibility : initial !important;
+  }
+
+  #categoriesFilter.showmenu{
+    margin-left:0px;
+  }
+  button.catclose {
+    font-size: 32px;
+    color: white;
+    opacity: 0.9;
+    right: 16px;
+    top: 6px;
+    font-weight: 800;
+    position: relative;
+    visibility : initial !important;
+  }
+  #searchByBrand .modal-dialog {
+         width: 90%;
+    margin: 60px auto;
+  }
+
+  .menu-categories-head {
+    max-width: 280px;
+  }
+}
+
 }
