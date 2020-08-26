@@ -11690,6 +11690,63 @@ p.err_msg_login {
   .menu-categories-head {
     max-width: 280px;
   }
+
 }
 
+
+/*cus 08/25/20 */
+/*produ page start*/
+body.modal-open-step{
+    overflow: hidden;
+}
+button.checkout-process-btn {
+    cursor: initial;
+}
+span.prev-step-checkout.pre-text,
+span.c-total-text.next-step-checkout {
+    cursor: pointer;
+}
+
+.wizard_checkout .nav-tabs > li a{
+  pointer-events: none;
+}
+.connecting-line{
+  width: 0%;
+  margin: 0 0 0 48px;
+}
+.checkout-tab-box .tab-content{
+      height: calc(100vh - 298px);
+}
+.checkout-box {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.wizard_checkout span.round-tab.complete {
+    background: #39b542;
+    color: white;
+}
+
+.connecting-line-base {
+    height: 2px;
+    background: #cccccc;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 22px;
+    z-index: 1;
+}
+.add-address-btn {
+    background-color: #39b542;
+    color: #fff;
+    border-radius: 4px;
+    width: 53%;
+    padding: 15px 20px;
+    font-weight: bold;
+    border: 1px solid #39b542;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
 }
